@@ -1,6 +1,6 @@
 {
   "name": "designkit-global",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sass module for a global CSS reset based on Normalize.",
   "repository": {
     "type": "git",
