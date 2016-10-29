@@ -1,6 +1,0 @@
-#!/bin/bash
-node-sass \
-  --output-style expanded \
-  --output css \
-  --include-path node_modules/bourbon/app/assets/stylesheets \
-  src/index.scss css/designkit-global.css

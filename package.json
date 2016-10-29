@@ -1,30 +1,44 @@
 {
   "name": "designkit-global",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sass module for a global CSS reset based on Normalize.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rightscale-design/designkit-global.git"
   },
   "author": {
-    "name": "Jason Melgoza",
-    "email": "jason@rightscale.com"
+    "name": "Jason Melgoza"
   },
   "license": "MIT",
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "postcss",
+    "design"
+  ],
   "bugs": {
     "url": "https://github.com/rightscale-design/designkit-global/issues"
   },
   "homepage": "https://github.com/rightscale-design/designkit-global#readme",
   "devDependencies": {
-    "bourbon": "^4.2.6",
-    "http-server": "^0.8.5",
-    "node-sass": "^3.4.2",
-    "nodemon": "^1.8.1"
+    "autoprefixer": "^6.4.0",
+    "bourbon": "^4.2.7",
+    "clean-css": "^3.4.19",
+    "http-server": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.0",
+    "npm-run-all": "^2.3.0",
+    "postcss-cli": "^2.5.2"
   },
   "scripts": {
-    "build-css": "./bin/build-css",
-    "build-min": "./bin/build-min",
-    "watch-css": "./bin/watch-css",
-    "serve": "./bin/http-server"
+    "start": "npm run build:serve",
+    "serve": "http-server -p 9000 -o",
+    "watch": "nodemon -e scss -x 'npm run build:all'",
+    "build:scss": "./bin/scss",
+    "build:prefix": "postcss -u autoprefixer -b 'last 2 versions' < src/css/_designkit-global.css > dist/designkit-global.css",
+    "build:minify": "cleancss -o dist/designkit-global.min.css dist/designkit-global.css",
+    "build:all": "npm run build:scss && npm run build:prefix && npm run build:minify",
+    "build:serve": "run-p watch serve"
   }
 }
