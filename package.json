@@ -1,13 +1,33 @@
 {
   "name": "designkit-global",
-  "description": "Sass module for a global CSS reset based on Normalize.",
   "version": "1.1.0",
+  "description": "Sass module for a global CSS reset based on Normalize.",
   "homepage": "https://github.com/rightscale-design/designkit-global#readme",
-  "bugs": "https://github.com/rightscale-design/designkit-global/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rightscale-design/designkit-global.git"
+  },
+  "author": {
+    "name": "Jason Melgoza"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sass",
+    "css",
+    "styles"
+  ],
+  "bugs": {
+    "url": "https://github.com/rightscale-design/designkit-global/issues"
+  },
   "files": [
     "LICENSE",
     "README.md",
     "dist/"
+  ],
+  "style": "src/index.scss",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
   ],
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -16,16 +36,13 @@
     "nodemon": "^1.10.0",
     "npm-run-all": "^2.3.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "scripts": {
     "start": "npm run build:serve",
     "watch": "nodemon -e scss -x 'npm run build:all'",
     "build:scss": "node ./scripts/scss.js",
     "build:prefix": "node ./scripts/postcss.js",
     "build:minify": "node ./scripts/minify.js",
-    "build:all": "npm run build:scss && npm run build:prefix && npm run build:minify"
+    "build:all": "npm run build:scss && npm run build:prefix && npm run build:minify",
+    "build:serve": "run-p watch"
   }
 }
