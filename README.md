@@ -1,13 +1,14 @@
-# Designkit Global
+# designkit-global
+1.1.1
+
 Sass module for a global CSS reset based on Normalize.
 
 ## Install
-
-```bash
-npm i designkit-global
+```
+npm i --save designkit-global
 ```
 
-## The CSS
+## CSS
 
 ```css
 /*
@@ -18,8 +19,6 @@ npm i designkit-global
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: 0;
 }
@@ -134,7 +133,6 @@ figure {
 }
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -206,8 +204,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -255,6 +251,7 @@ dl {
 li {
   list-style: none;
 }
+
 ```
 
 ## Author

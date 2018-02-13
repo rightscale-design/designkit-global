@@ -1,6 +1,6 @@
 {
   "name": "designkit-global",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sass module for a global CSS reset based on Normalize.",
   "homepage": "https://github.com/rightscale-design/designkit-global#readme",
   "repository": {
@@ -24,7 +24,8 @@
     "README.md",
     "dist/"
   ],
-  "style": "src/index.scss",
+  "scss": "src/_designkit-global.scss",
+  "main": "dist/designkit-global.min.css",
   "browserslist": [
     "> 1%",
     "last 2 versions"
@@ -32,6 +33,7 @@
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "csso": "^3.1.1",
+    "lodash": "^4.17.5",
     "node-sass": "^4.5.3",
     "nodemon": "^1.10.0",
     "npm-run-all": "^2.3.0"
@@ -42,7 +44,8 @@
     "build:scss": "node ./scripts/scss.js",
     "build:prefix": "node ./scripts/postcss.js",
     "build:minify": "node ./scripts/minify.js",
-    "build:all": "npm run build:scss && npm run build:prefix && npm run build:minify",
+    "build:readme": "node ./scripts/readme.js",
+    "build:all": "npm run build:scss && npm run build:prefix && npm run build:minify && npm run build:readme",
     "build:serve": "run-p watch"
   }
 }

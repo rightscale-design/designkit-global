@@ -1,3 +1,9 @@
+# v1.1.1
+
+* Updated Readme
+* Updated package.json
+* Added Readme script
+
 # v1.1.0
 
 * Updated build scripts
