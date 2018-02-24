@@ -1,6 +1,6 @@
 {
   "name": "designkit-global",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Sass module for a global CSS reset based on Normalize.",
   "homepage": "https://github.com/rightscale-design/designkit-global#readme",
   "repository": {
@@ -20,9 +20,14 @@
     "url": "https://github.com/rightscale-design/designkit-global/issues"
   },
   "files": [
+    "package.json",
     "LICENSE",
     "README.md",
-    "dist/"
+    "CHANGELOG.md",
+    "dist/designkit-global.css",
+    "dist/designkit-global.min.css",
+    "src/_designkit-global.scss",
+    "src/index.scss"
   ],
   "scss": "src/_designkit-global.scss",
   "main": "dist/designkit-global.min.css",

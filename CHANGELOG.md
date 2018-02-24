@@ -1,3 +1,7 @@
+# v1.1.2
+
+* Minor update to the package.json files array
+
 # v1.1.1
 
 * Updated Readme
