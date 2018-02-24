@@ -1,5 +1,5 @@
 # designkit-global
-1.1.1
+1.1.2
 
 Sass module for a global CSS reset based on Normalize.
 
